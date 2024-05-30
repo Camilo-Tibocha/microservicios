@@ -1,0 +1,47 @@
+### Prueba del microsevicio
+GET http://127.0.0.1/
+Content-Type: text/html
+
+### Crear una tarea
+POST http://127.0.0.1/api/tarea
+Content-Type: application/json
+
+{
+   "titulo":  "Trabajo",
+   "descripcion": "Hice el trabajo",
+   "idEstado": "1",
+   "fechaEstimadaFinalizacion": "26/07/2023",
+   "creadorTarea": "camilo",
+   "idEmpleado": "1",
+   "idPrioridad": "2",
+   "observaciones": "Nada",
+   
+   //"nombre": "Anita la la tina",
+   //"email": "anita@test.com",
+   //"telefono": "123anita"
+}
+
+### Actualizar una tarea
+PUT http://127.0.0.1/api/tarea
+Content-Type: application/json
+
+{
+   "titulo":  " ",
+   "descripcion": "",
+   "idEstado": " ",
+   "fechaEstimadaFinalizacion": "",
+   "creadorTarea": "",
+   "idEmpleado": " ",
+   "idPrioridad": " ",
+   "observaciones": " ",
+}
+
+### Eliminar una tarea
+DELETE http://127.0.0.1/api/tarea/2
+Content-Type: application/json
+
+### Listar una tarea
+GET http://127.0.0.1/api/tarea
+Content-Type: application/json
+
+
