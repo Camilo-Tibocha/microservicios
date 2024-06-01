@@ -19,8 +19,12 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/tarea', 'TareaController@store');
+    $router->get('/tarea/{id}', 'ListarTareaController@index');
     $router->put('/tarea/{id}', 'ActualizarTareaController@update');
     $router->delete('/tarea/{id}', 'EliminarTareaController@destroy');
-    $router->get('/tarea/{id}', 'ListarTareaController@index');
-    $router->post('/tarea', 'TareaController@store');
+    $router->get('/tarea/{id}', 'EstadosTareaController@index');
+    $router->put('/tarea/{id}', 'CambiarEstadoController@update');
+    $router->put('/tarea/{id}', 'ReasignarTareaController@update');
+    
+    $router->post('/tarea2', 'TareaController@store');
 });

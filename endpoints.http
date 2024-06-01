@@ -1,47 +1,62 @@
 ### Prueba del microsevicio
-GET http://127.0.0.1/
+GET http://127.0.0.1:8000/
 Content-Type: text/html
 
 ### Crear una tarea
-POST http://127.0.0.1/api/tarea
+POST http://127.0.0.1:8000/api/tarea
 Content-Type: application/json
 
 {
-   "titulo":  "Trabajo",
-   "descripcion": "Hice el trabajo",
+   "titulo": "Trabajo",
+   "descripcion": "Hice el tas",
    "idEstado": "1",
-   "fechaEstimadaFinalizacion": "26/07/2023",
-   "creadorTarea": "camilo",
-   "idEmpleado": "1",
-   "idPrioridad": "2",
-   "observaciones": "Nada",
-   
-   //"nombre": "Anita la la tina",
-   //"email": "anita@test.com",
-   //"telefono": "123anita"
+   "fecha estimada de finalizacion": "2024-07-26",
+   "creador de la tarea": "tito",
+   "responsable de la tarea": "1",
+   "prioridad": "2",
+   "observaciones": "Nada"
 }
 
 ### Actualizar una tarea
-PUT http://127.0.0.1/api/tarea
+PUT http://127.0.0.1:8000/api/tarea/3
 Content-Type: application/json
 
 {
-   "titulo":  " ",
-   "descripcion": "",
-   "idEstado": " ",
-   "fechaEstimadaFinalizacion": "",
-   "creadorTarea": "",
-   "idEmpleado": " ",
-   "idPrioridad": " ",
-   "observaciones": " ",
+   "titulo": "Trabajo",
+   "descripcion": "hice el trabajo",
+   "idEstado": "2",
+   "fecha estimada de finalizacion": "2024-06-27",
+   "creador de la tarea": "camilo",
+   "responsable de la tarea": "2",
+   "prioridad": "1",
+   "observaciones": "Ninguna"
 }
 
 ### Eliminar una tarea
-DELETE http://127.0.0.1/api/tarea/2
+DELETE http://127.0.0.1:8000/api/tarea/2
 Content-Type: application/json
 
 ### Listar una tarea
-GET http://127.0.0.1/api/tarea
+GET http://127.0.0.1:8000/api/tarea
 Content-Type: application/json
 
+### Tareas agrupadas por estado
+GET http://127.0.0.1:8000/api/tarea
+Content-Type: application/json
+
+### Actualizar un estado
+PUT http://127.0.0.1:8000/api/tarea/1
+Content-Type: application/json
+
+{
+   "idEstado": "1"
+}
+
+### Reasignar la tarea a otro responsable
+PUT http://127.0.0.1:8000/api/tarea/1
+Content-Type: application/json
+
+{
+   "responsable de la tarea": "1"
+}
 

@@ -18,12 +18,13 @@ class TareaController extends Controller
     function store(Request $request)
     {
         $datos = $request->all();
+        
         $tarea = new Tarea();
         $tarea->titulo = $datos['titulo'];
         $tarea->descripcion = $datos['descripcion'];
         // $tarea->created_at = $datos['fecha de creacion'];
         // $tarea->updated_at = $datos['fecha de modificacion'];
-        $tarea->idEstado = $datos['estado'];
+        $tarea->idEstado = $datos['idEstado'];
         $tarea->fechaEstimadaFinalizacion = $datos['fecha estimada de finalizacion'];
         $tarea->creadorTarea = $datos['creador de la tarea'];
         $tarea->idEmpleado = $datos['responsable de la tarea'];

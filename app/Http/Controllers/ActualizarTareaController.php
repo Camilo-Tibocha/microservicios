@@ -14,7 +14,7 @@ class ActualizarTareaController extends Controller
         $tarea = Tarea::find($id);
         $tarea->titulo = $datos['titulo'];
         $tarea->descripcion = $datos['descripcion'];
-        $tarea->idEstado = $datos['estado'];
+        $tarea->idEstado = $datos['idEstado'];
         $tarea->fechaEstimadaFinalizacion = $datos['fecha estimada de finalizacion'];
         $tarea->creadorTarea = $datos['creador de la tarea'];
         $tarea->idEmpleado = $datos['responsable de la tarea'];

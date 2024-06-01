@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EstadosTareaController extends Controller
 {
     // Este lo usé para agrupar las tareas por estado.
-    public function index(Request $request)
+    function index(Request $request)
     {
         $tareas = Tarea::query()
             ->select('idEstado', 'nombre')
