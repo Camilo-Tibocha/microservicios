@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Actualizar una tarea
-PUT http://127.0.0.1:8000/api/tarea/3
+PUT http://127.0.0.1:8000/api/tarea/1
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
    "idEstado": "2",
    "fecha estimada de finalizacion": "2024-06-27",
    "creador de la tarea": "camilo",
-   "responsable de la tarea": "2",
+   "responsable de la tarea": "1",
    "prioridad": "1",
    "observaciones": "Ninguna"
 }
@@ -37,11 +37,11 @@ DELETE http://127.0.0.1:8000/api/tarea/2
 Content-Type: application/json
 
 ### Listar una tarea
-GET http://127.0.0.1:8000/api/tarea
+GET http://127.0.0.1:8000/api/tarea4
 Content-Type: application/json
 
 ### Tareas agrupadas por estado
-GET http://127.0.0.1:8000/api/tarea
+GET http://127.0.0.1:8000/api/tarea3
 Content-Type: application/json
 
 ### Actualizar un estado
@@ -49,14 +49,17 @@ PUT http://127.0.0.1:8000/api/tarea/1
 Content-Type: application/json
 
 {
-   "idEstado": "1"
+   "idEstado": "2"
 }
 
 ### Reasignar la tarea a otro responsable
-PUT http://127.0.0.1:8000/api/tarea/1
+PUT http://127.0.0.1:8000/api/tarea1/1
 Content-Type: application/json
 
 {
    "responsable de la tarea": "1"
 }
 
+### filtrar una tarea
+GET http://127.0.0.1:8000/api/tarea2
+Content-Type: application/json

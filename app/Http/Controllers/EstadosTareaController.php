@@ -10,13 +10,9 @@ class EstadosTareaController extends Controller
     // Este lo usé para agrupar las tareas por estado.
     function index(Request $request)
     {
-        $tareas = Tarea::query()
-            ->select('idEstado', 'nombre')
-            ->groupBy('idEstado')
-            ->get();
-
-        return response()->json([
-            'tareas' => $tareas
-        ]);
+        $tareas = Tarea::all();
+        $tareasAgrupadas = $tareas->groupBy('idEstado');
+        $data = ['data' => $tareasAgrupadas];
+        return response()->json($data);
     }
 }
